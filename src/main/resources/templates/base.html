@@ -14,10 +14,10 @@
 
 <body>
 <div th:fragment="navlinks">
-
+    <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-             <a href = "/">Home</a>
+             <a class="navbar-brand" href = "/">Home</a>
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href = "/adddepartment">Add Department</a></li>
@@ -25,7 +25,9 @@
                 <li><a href = "/alldepartments">All Departments</a></li>
                 <li><a href = "/allemployees">All Employees</a></li>
             </ul>
-</div>
+        </div>
+    </nav>
+
 
 <div class="container">
     <div class="jumbotron">
@@ -34,5 +36,6 @@
 
 </div>
 </div>
+
 </body>
 </html>
