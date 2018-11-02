@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:insert="base :: header"></th:block>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+<span th:text="${employee.name}"></span>
+<span th:text="${employee.jobTitle}"></span>
+<span th:text="${employee.department.name}"></span>
+    </div>
+</div>
+</body>
+</html>

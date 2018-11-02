@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:insert="base :: header"></th:block>
+</head>
+<body>
+<div th:replace="base :: navlinks"></div>
+<div class="container">
+    <div class="jumbotron">
+<form action="#" th:action="@{/addemployee}" th:object="${employee}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    Name:    <input type="text" name="name" th:field="*{name}"> <br />
+    Job Title:    <input type="text" name="jobTitle" th:field="*{jobTitle}"><br />
+    Department:    <select name="department" th:field="*{department}">
+        <option th:each="department : ${departments}"
+                th:value="${department.id}"
+                th:text="${department.name}"/>
+    </select><br/>
+    <input type="submit" value="submit"/>
+</form>
+    </div>
+
+</body>
+</html>

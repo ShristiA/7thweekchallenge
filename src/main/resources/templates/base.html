@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <th:block th:fragment="header">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </th:block>
+</head>
+
+<body>
+<div th:fragment="navlinks">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+             <a href = "/">Home</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href = "/adddepartment">Add Department</a></li>
+                <li><a href = "/addemployee">Add Employees</a></li>
+                <li><a href = "/alldepartments">All Departments</a></li>
+                <li><a href = "/allemployees">All Employees</a></li>
+            </ul>
+</div>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1> Sterling Solutions: Employee Database</h1>
+    </div>
+
+</div>
+</div>
+</body>
+</html>

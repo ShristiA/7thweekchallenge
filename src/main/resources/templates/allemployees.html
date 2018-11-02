@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:insert="base :: header"></th:block>
+</head>
+<body>
+<div th:replace="base :: navlinks"></div>
+<div class="container">
+    <div class="jumbotron">
+    <p th:each="employee: ${employees}">
+        <span th:text="${employee.name}"></span>
+        <span th:text="${employee.jobTitle}"></span>
+        <span th:text="${employee.department.name}"></span>
+
+        <a th:href="@{/update/{id}(id=${employee.id})}">Update</a> -
+        <a th:href="@{/detail/{id}(id=${employee.id})}">Detail</a> -
+        <a th:href="@{/delete/{id}(id=${employee.id})}">Delete</a>
+    </p>
+    </div>
+
+</body>
+</html>
